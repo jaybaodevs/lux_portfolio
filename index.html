@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fbf7f1" />
+  <meta name="description" content="John Paul Yambao's IT internship portfolio. Explore manual QA testing, IT support and troubleshooting, networking labs, interface design, and frontend projects." />
+  <meta property="og:title" content="John Paul Yambao — IT Portfolio" />
+  <meta property="og:description" content="IT support, QA testing, networking fundamentals, and thoughtful digital experiences." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>try { if (localStorage.getItem('jp-theme-v9') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch(e) { /* local previews may restrict storage */ }</script>
+  <script defer src="script.js"></script>
+  <title>John Paul Yambao — IT Portfolio</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-diagonal" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8m-4-4v4"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2.5"/><circle cx="4.5" cy="19" r="2.5"/><circle cx="19.5" cy="19" r="2.5"/><path d="M11 7 6 16m7-9 5 9M7 19h10"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01M12 7h6m-6 10h6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-checkshield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 6-4 9-9 10-5-1-9-4-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-graduate" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Zm4 2v6c3 3 9 3 12 0v-6M22 9v7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-location" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24"><path d="M21 7a6 6 0 0 1-8 6L6 20a2 2 0 0 1-3-3l7-7a6 6 0 0 1 6-8l-3 5 4 4 4-4Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4m8-4v4M3 10h18"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6 9a7 7 0 0 1 12-2l2 5M4 12l2 5a7 7 0 0 0 12-2"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="16" rx="2"/><rect x="9" y="2" width="6" height="5" rx="1"/><path d="M9 12h6m-6 4h6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 15.1A8.5 8.5 0 0 1 8.9 3.5 8.5 8.5 0 1 0 20.5 15.1Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2m17.1 7.1-1.4-1.4M6.3 6.3 4.9 4.9m14.2 0-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="header-inner wrap">
+      <a class="brand" href="#home" aria-label="John Paul Yambao, go to home"><span class="brand-slash">/</span> John Paul Yambao<span class="brand-dot">.</span></a>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="utility-button recruiter-toggle" id="recruiter-toggle" type="button" aria-pressed="false" aria-label="Switch to recruiter summary" title="Compact overview for recruiters"><svg class="icon"><use href="#i-eye"/></svg><span id="recruiter-toggle-label">Recruiter view</span></button>
+
+        <a class="pill pill-dark header-resume" href="assets/John_Paul_Yambao_Resume.pdf" download="John_Paul_Yambao_Resume.pdf"><svg class="icon"><use href="#i-download"/></svg> Resume</a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 850 720" preserveAspectRatio="xMidYMid slice"><defs>
+            <linearGradient id="hero-gold" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fdf9f3"/><stop offset=".45" stop-color="#ead8c7"/><stop offset="1" stop-color="#cfad95"/></linearGradient>
+            <linearGradient id="hero-light" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#f5e8d9"/><stop offset=".6" stop-color="#fffaf3"/><stop offset="1" stop-color="#ddbea5"/></linearGradient>
+            <linearGradient id="hero-deep" x1="0" x2="1" y1="0" y2="0"><stop stop-color="#fff9f1"/><stop offset="1" stop-color="#bd9b7c"/></linearGradient>
+          </defs>
+          <path d="M-80 610C170 620 215 300 470 180 625 106 701 53 900-100V800H-80Z" fill="url(#hero-gold)" opacity=".75"/>
+          <path d="M-90 729C200 620 310 388 511 353c181-31 194-179 391-263v720H-90Z" fill="url(#hero-light)" opacity=".91"/>
+          <path d="M-50 747C261 604 366 618 596 437c140-110 228-171 348-174v500H-50Z" fill="url(#hero-deep)" opacity=".38"/>
+          <path d="M-40 624C192 620 290 331 470 224c166-98 285-159 449-288" fill="none" stroke="#fffaf5" stroke-width="3" opacity=".8"/>
+          <path d="M-20 730c308-130 336-302 551-348 200-43 242-203 412-255" fill="none" stroke="#fdf7f1" stroke-width="4" opacity=".9"/>
+        </svg>
+      </div>
+      <div class="hero-portrait" aria-hidden="true"><img src="assets/john_paul_cutout.webp" alt="" width="1122" height="1402" fetchpriority="high" /></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">BSIT student <span>/</span> Portfolio 2026</p>
+          <h1 id="hero-title">John Paul<br />Yambao<span class="dot">.</span></h1>
+          <p class="hero-role">IT Support <span>·</span> Networking Fundamentals <span>·</span> Software QA</p>
+          <p class="hero-description">Fourth-year IT student at the National College of Science and Technology. I enjoy diagnosing technical problems, testing real-world workflows, and creating practical digital experiences.</p>
+          <div class="hero-actions">
+            <a class="pill pill-dark" href="#work">Explore my work <svg class="icon"><use href="#i-diagonal"/></svg></a>
+            <a class="pill pill-outline" href="assets/John_Paul_Yambao_Resume.pdf" download="John_Paul_Yambao_Resume.pdf"><svg class="icon"><use href="#i-download"/></svg> Download resume</a>
+          </div>
+        </div>
+        <div class="hero-side-note" aria-label="Current academic status">
+          <span>Based in Cavite, Philippines</span><span>BSIT · 4th Year</span><span>Open to OJT opportunities</span>
+        </div>
+      </div>
+      <div class="hero-bottom wrap"><span>Scroll to explore</span><span class="line"></span><span>01 — 07</span></div>
+    </section>
+
+    <section class="capabilities section wrap" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading"><div><span class="section-number">01 /</span><h2 id="skills-title">Areas of practice</h2></div><p>Technical foundations backed by hands-on work and academic projects.</p></div>
+      <div class="capability-grid">
+        <article class="capability"><span class="capability-icon"><svg class="icon"><use href="#i-monitor"/></svg></span><h3>IT Support</h3><p>Desktop assembly, Windows installation, troubleshooting and maintenance.</p></article>
+        <article class="capability"><span class="capability-icon"><svg class="icon"><use href="#i-network"/></svg></span><h3>Networking</h3><p>IP configuration, connectivity testing, cabling and Packet Tracer practice.</p></article>
+        <article class="capability"><span class="capability-icon"><svg class="icon"><use href="#i-server"/></svg></span><h3>System Administration</h3><p>Windows Server, Active Directory, DHCP and Group Policy in classroom labs.</p></article>
+        <article class="capability"><span class="capability-icon"><svg class="icon"><use href="#i-checkshield"/></svg></span><h3>Software QA</h3><p>Functional testing, cross-role workflows, issue reporting and retesting.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><span class="section-number">02 /</span><h2 id="work-title">Selected work</h2></div><p>Projects are presented by what I contributed, not just what the product does.</p></div>
+
+      <article class="featured-project editorial-feature" aria-labelledby="solespace-title">
+        <div class="featured-media media-surface composite-feature" aria-label="SoleSpace project page previews">
+  <div class="feature-image-top">
+    <span class="feature-heading"><img class="solespace-mark" src="assets/solespace_logo.webp" alt="SoleSpace shoe emblem" loading="lazy" /><span>01 / Academic thesis project</span></span>
+    <span>2026</span>
+  </div>
+  <div class="composite-stage composite-feature-stage layout-three" aria-label="SoleSpace homepage, products catalog, and dashboard, shown together">
+    <button type="button" class="composite-shot composite-main" data-view-image="solespace.webp" data-image-caption="SoleSpace / Homepage" aria-label="View full size: SoleSpace / Homepage" title="View SoleSpace / Homepage at full size">
+        <img src="assets/solespace.webp" alt="SoleSpace / Homepage screenshot" loading="lazy" decoding="async" />
+      </button>
+    <button type="button" class="composite-shot composite-upper" data-view-image="solespace_products.webp" data-image-caption="SoleSpace / Product catalog" aria-label="View full size: SoleSpace / Product catalog" title="View SoleSpace / Product catalog at full size">
+        <img src="assets/solespace_products.webp" alt="SoleSpace / Product catalog screenshot" loading="lazy" decoding="async" />
+      </button>
+    <button type="button" class="composite-shot composite-lower" data-view-image="solespace_admin.webp" data-image-caption="SoleSpace / System monitoring dashboard" aria-label="View full size: SoleSpace / System monitoring dashboard" title="View SoleSpace / System monitoring dashboard at full size">
+        <img src="assets/solespace_admin.webp" alt="SoleSpace / System monitoring dashboard screenshot" loading="lazy" decoding="async" />
+      </button>
+  </div>
+  <div class="composite-footnote">
+    <span>Homepage · Product catalog · System monitoring</span>
+    <span>Click any screen to inspect ↗</span>
+  </div>
+</div>
+<div class="featured-copy">
+          <div class="feature-meta"><span>Thesis platform / 2026</span><span>01 / 06</span></div>
+          <h3 id="solespace-title" class="display-title">SoleSpace</h3>
+          <p class="project-role">Project Manager &amp; Primary Manual QA Tester</p>
+          <p class="project-summary">An integrated footwear retail and repair management platform in Cavite, featuring business operations, a mobile application and decision support tools. I defined expected workflows with the team, executed manual tests across ERP user roles, reported issues and verified fixes.</p>
+          <div class="chipline feature-chips"><span>Functional QA</span><span>ERP workflows</span><span>Regression testing</span><span>Project coordination</span></div>
+          <div class="stats" aria-label="October 12, 2026 testing snapshot"><div><strong>80/80</strong><span>Core checks passed retesting</span></div><div><strong>32/32</strong><span>Regression scenarios passed</span></div><div><strong>12</strong><span>Module groups covered</span></div></div>
+          <p class="scope-note">October 12, 2026 · V2 Business Both test report; results apply only to the documented scope.</p>
+          <div class="project-actions"><button class="pill pill-dark" type="button" data-open-project="solespace">Explore QA case study <svg class="icon"><use href="#i-diagonal"/></svg></button><a class="underlined-action" href="https://solespace.shop/" target="_blank" rel="noopener noreferrer">Live website <svg class="icon"><use href="#i-diagonal"/></svg></a></div>
+        </div>
+      </article>
+
+      <div class="qa-evidence-header"><h3 class="serif-heading">Selected QA investigations</h3><p>Two issues I identified, reported, and retested after programmer fixes.</p></div>
+      <div class="qa-grid">
+        <article class="qa-case"><span class="case-num">01</span><div><span class="case-label">Dispatcher / Rider</span><h4>Assigned delivery not visible</h4><p>A Dispatcher-assigned delivery didn't appear in the Rider's account. I reported the discrepancy with screenshots and retested the assignment after the programmer fixed it.</p><button class="small-action" data-open-project="rider" type="button">Read investigation <svg class="icon"><use href="#i-diagonal"/></svg></button></div></article>
+        <article class="qa-case"><span class="case-num">02</span><div><span class="case-label">Returns / Finance</span><h4>Refund approval sequence</h4><p>A third-party return requested a Dispatcher shipment too early. I documented the Staff → Finance → shipment sequence and verified the workflow after correction.</p><button class="small-action" data-open-project="refund" type="button">Read investigation <svg class="icon"><use href="#i-diagonal"/></svg></button></div></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="design" aria-labelledby="design-title">
+      <div class="section-heading"><div><span class="section-number">03 /</span><h2 id="design-title">Interface design</h2></div><p>Personal Figma concepts. Interactive prototypes, not deployed applications.</p></div>
+      <div class="showcase-stack">
+        <article class="showcase-row" aria-labelledby="nexacare-title">
+          <div class="showcase-visual gallery-showcase gallery-nexacare composite-showcase">
+      <div class="gallery-showcase-head"><span>01 / Personal UI/UX project</span></div>
+      <div class="composite-stage layout-four" aria-label="NexaCare layered project screenshots">
+      <button type="button" class="composite-shot composite-main" data-view-image="nexa_landing.webp" data-image-caption="NexaCare / Landing page" aria-label="View full size: NexaCare / Landing page" title="View NexaCare / Landing page at full size">
+        <img src="assets/nexa_landing.webp" alt="NexaCare / Landing page screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-upper" data-view-image="nexa_dash.webp" data-image-caption="NexaCare / Dashboard" aria-label="View full size: NexaCare / Dashboard" title="View NexaCare / Dashboard at full size">
+        <img src="assets/nexa_dash.webp" alt="NexaCare / Dashboard screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-lower" data-view-image="nexa_patient.webp" data-image-caption="NexaCare / Patient registration" aria-label="View full size: NexaCare / Patient registration" title="View NexaCare / Patient registration at full size">
+        <img src="assets/nexa_patient.webp" alt="NexaCare / Patient registration screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-accent" data-view-image="nexa_appointments.webp" data-image-caption="NexaCare / Appointments" aria-label="View full size: NexaCare / Appointments" title="View NexaCare / Appointments at full size">
+        <img src="assets/nexa_appointments.webp" alt="NexaCare / Appointments screenshot" loading="lazy" decoding="async" />
+      </button>
+      </div>
+      <div class="composite-footnote"><span>04 screens · Landing page · Dashboard · Patient registration · Appointments</span><span>Click to enlarge ↗</span></div>
+    </div><div class="showcase-copy"><div class="showcase-meta"><span>Healthcare interface concept</span><span>2025</span></div><h3 id="nexacare-title">NexaCare</h3><p class="showcase-role">Personal project · UI/UX Designer</p><p>Designed a navigable healthcare management UI concept covering its public landing page, sign-in, dashboard, forms and logout. Created in Figma; not a deployed healthcare system.</p><div class="chipline"><span>Figma</span><span>UI/UX</span><span>Interactive prototype</span></div><div class="showcase-actions"><button type="button" class="pill pill-dark" data-open-project="nexacare">Explore project <svg class="icon"><use href="#i-diagonal"/></svg></button><a class="underlined-action" href="https://www.figma.com/proto/n8Rjk2YOJF8D7Zs9KYJAJh/nexacare?node-id=0-1&amp;t=K2b93P10esiyYcw9-1" target="_blank" rel="noopener noreferrer">Figma prototype <svg class="icon"><use href="#i-diagonal"/></svg></a></div></div>
+        </article>
+        <article class="showcase-row reverse" aria-labelledby="drip-title">
+          <div class="showcase-visual showcase-drip"><span class="showcase-visual-label">02 / Personal UI/UX project</span><div class="showcase-drip-logo"><img src="assets/drip_logo.webp" alt="Drip brand mark" width="136" height="78" loading="lazy" /></div><div class="showcase-drip-auth"><img src="assets/drip_login.webp" alt="Drip sign-in and sign-up screens" width="389" height="400" loading="lazy" /></div><div class="showcase-drip-phone"><img src="assets/drip_home.webp" alt="Drip mobile shopping homepage" width="314" height="665" loading="lazy" /></div></div>
+          <div class="showcase-copy"><div class="showcase-meta"><span>Mobile app interface concept</span><span>2025</span></div><h3 id="drip-title">Drip</h3><p class="showcase-role">Personal project · UI/UX Designer</p><p>Designed an interactive mobile storefront prototype with account access, product discovery, cart and checkout screens. The Figma prototype demonstrates navigation, not working payments or a backend.</p><div class="chipline"><span>Figma</span><span>Mobile UI/UX</span><span>Prototype</span></div><div class="showcase-actions"><button type="button" class="pill pill-dark" data-open-project="drip">Explore project <svg class="icon"><use href="#i-diagonal"/></svg></button><a class="underlined-action" href="https://www.figma.com/proto/4zudnxIhIa7psIR9sLLmSx/Drip?node-id=0-1&amp;t=XO9mSlQY30EYodMF-1" target="_blank" rel="noopener noreferrer">Figma prototype <svg class="icon"><use href="#i-diagonal"/></svg></a></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="websites" aria-labelledby="websites-title">
+      <div class="section-heading"><div><span class="section-number">04 /</span><h2 id="websites-title">Independent websites</h2></div><p>Three solo WordPress / Elementor Pro promotional experiences.</p></div>
+      <div class="showcase-stack website-stack-list">
+        <article class="showcase-row " aria-labelledby="site-1"><div class="showcase-visual gallery-showcase gallery-yambiance composite-showcase">
+      <div class="gallery-showcase-head"><span>01 / Independent website</span><img class="brand-preview-logo" src="assets/yambiance_logo.webp" alt="Yambiance logo" loading="lazy" /></div>
+      <div class="composite-stage layout-four" aria-label="Yambiance layered project screenshots">
+      <button type="button" class="composite-shot composite-main" data-view-image="yambiance.webp" data-image-caption="Yambiance / Homepage" aria-label="View full size: Yambiance / Homepage" title="View Yambiance / Homepage at full size">
+        <img src="assets/yambiance.webp" alt="Yambiance / Homepage screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-upper" data-view-image="yambiance_rooms.webp" data-image-caption="Yambiance / Rooms" aria-label="View full size: Yambiance / Rooms" title="View Yambiance / Rooms at full size">
+        <img src="assets/yambiance_rooms.webp" alt="Yambiance / Rooms screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-lower" data-view-image="yambiance_gallery.webp" data-image-caption="Yambiance / Gallery" aria-label="View full size: Yambiance / Gallery" title="View Yambiance / Gallery at full size">
+        <img src="assets/yambiance_gallery.webp" alt="Yambiance / Gallery screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-accent" data-view-image="yambiance_contact.webp" data-image-caption="Yambiance / Contact" aria-label="View full size: Yambiance / Contact" title="View Yambiance / Contact at full size">
+        <img src="assets/yambiance_contact.webp" alt="Yambiance / Contact screenshot" loading="lazy" decoding="async" />
+      </button>
+      </div>
+      <div class="composite-footnote"><span>04 screens · Homepage · Rooms · Gallery · Contact</span><span>Click to enlarge ↗</span></div>
+    </div><div class="showcase-copy"><div class="showcase-meta"><span>Mountainside hospitality</span><span>2026</span></div><h3 id="site-1">Yambiance</h3><p class="showcase-role">Independent web designer · WordPress / Elementor Pro</p><p>A mountain hotel website showcasing rooms and a quiet retreat aesthetic. Designed and assembled independently with WordPress and Elementor Pro.</p><div class="chipline"><span>WordPress</span><span>Elementor Pro</span><span>Frontend demonstration</span></div><div class="showcase-actions"><button class="pill pill-outline" type="button" data-open-project="yambiance">Explore pages <svg class="icon"><use href="#i-diagonal"/></svg></button><a class="pill pill-dark" href="https://yambaotechnoprefi.free.nf/?i=1" target="_blank" rel="noopener noreferrer">Visit website <svg class="icon"><use href="#i-diagonal"/></svg></a></div></div></article>
+        <article class="showcase-row reverse" aria-labelledby="site-2"><div class="showcase-visual gallery-showcase gallery-yamshore composite-showcase">
+      <div class="gallery-showcase-head"><span>02 / Independent website</span><img class="brand-preview-logo" src="assets/yamshore_logo.webp" alt="Yamshore logo" loading="lazy" /></div>
+      <div class="composite-stage layout-four" aria-label="Yamshore layered project screenshots">
+      <button type="button" class="composite-shot composite-main" data-view-image="yamshore.webp" data-image-caption="Yamshore / Homepage" aria-label="View full size: Yamshore / Homepage" title="View Yamshore / Homepage at full size">
+        <img src="assets/yamshore.webp" alt="Yamshore / Homepage screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-upper" data-view-image="yamshore_rooms.webp" data-image-caption="Yamshore / Accommodations" aria-label="View full size: Yamshore / Accommodations" title="View Yamshore / Accommodations at full size">
+        <img src="assets/yamshore_rooms.webp" alt="Yamshore / Accommodations screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-lower" data-view-image="yamshore_gallery.webp" data-image-caption="Yamshore / Gallery" aria-label="View full size: Yamshore / Gallery" title="View Yamshore / Gallery at full size">
+        <img src="assets/yamshore_gallery.webp" alt="Yamshore / Gallery screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-accent" data-view-image="yamshore_contact.webp" data-image-caption="Yamshore / Inquiry" aria-label="View full size: Yamshore / Inquiry" title="View Yamshore / Inquiry at full size">
+        <img src="assets/yamshore_contact.webp" alt="Yamshore / Inquiry screenshot" loading="lazy" decoding="async" />
+      </button>
+      </div>
+      <div class="composite-footnote"><span>04 screens · Homepage · Accommodations · Gallery · Inquiry</span><span>Click to enlarge ↗</span></div>
+    </div><div class="showcase-copy"><div class="showcase-meta"><span>Coastal hospitality</span><span>2026</span></div><h3 id="site-2">Yamshore</h3><p class="showcase-role">Independent web designer · WordPress / Elementor Pro</p><p>A seaside resort promotional concept organized around accommodations and experiences. Solo WordPress and Elementor Pro design and implementation.</p><div class="chipline"><span>WordPress</span><span>Elementor Pro</span><span>Frontend demonstration</span></div><div class="showcase-actions"><button class="pill pill-outline" type="button" data-open-project="yamshore">Explore pages <svg class="icon"><use href="#i-diagonal"/></svg></button><a class="pill pill-dark" href="https://yambaotechnolabexam.free.nf/?i=1" target="_blank" rel="noopener noreferrer">Visit website <svg class="icon"><use href="#i-diagonal"/></svg></a></div></div></article>
+        <article class="showcase-row " aria-labelledby="site-3"><div class="showcase-visual gallery-showcase gallery-hapag composite-showcase">
+      <div class="gallery-showcase-head"><span>03 / Independent website</span><img class="brand-preview-logo" src="assets/hapag_logo.webp" alt="Hapag logo" loading="lazy" /></div>
+      <div class="composite-stage layout-three" aria-label="Hapag layered project screenshots">
+      <button type="button" class="composite-shot composite-main" data-view-image="hapag.webp" data-image-caption="Hapag / Homepage" aria-label="View full size: Hapag / Homepage" title="View Hapag / Homepage at full size">
+        <img src="assets/hapag.webp" alt="Hapag / Homepage screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-upper" data-view-image="hapag_dish.webp" data-image-caption="Hapag / Featured dishes" aria-label="View full size: Hapag / Featured dishes" title="View Hapag / Featured dishes at full size">
+        <img src="assets/hapag_dish.webp" alt="Hapag / Featured dishes screenshot" loading="lazy" decoding="async" />
+      </button>
+<button type="button" class="composite-shot composite-lower" data-view-image="hapag_contact.webp" data-image-caption="Hapag / Contact and hours" aria-label="View full size: Hapag / Contact and hours" title="View Hapag / Contact and hours at full size">
+        <img src="assets/hapag_contact.webp" alt="Hapag / Contact and hours screenshot" loading="lazy" decoding="async" />
+      </button>
+      </div>
+      <div class="composite-footnote"><span>03 screens · Homepage · Featured dishes · Contact and hours</span><span>Click to enlarge ↗</span></div>
+    </div><div class="showcase-copy"><div class="showcase-meta"><span>Filipino dining</span><span>2026</span></div><h3 id="site-3">Hapag</h3><p class="showcase-role">Independent web designer · WordPress / Elementor Pro</p><p>A Filipino cuisine restaurant promotional website highlighting food, atmosphere and dining identity. Solo WordPress and Elementor Pro work.</p><div class="chipline"><span>WordPress</span><span>Elementor Pro</span><span>Frontend demonstration</span></div><div class="showcase-actions"><button class="pill pill-outline" type="button" data-open-project="hapag">Explore pages <svg class="icon"><use href="#i-diagonal"/></svg></button><a class="pill pill-dark" href="https://orange-wildflower-83de.lolers331.workers.dev/sample-page/homepage/" target="_blank" rel="noopener noreferrer">Visit website <svg class="icon"><use href="#i-diagonal"/></svg></a></div></div></article>
+      </div>
+      <p class="small-disclaimer">These sites demonstrate frontend design. Booking, ordering and other backend processing are not part of these projects.</p>
+    </section>
+
+    <section class="section wrap" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><span class="section-number">05 /</span><h2 id="experience-title">Technical skills in practice</h2></div><p>Practical IT tasks spanning computer support, Windows setup and academic networking labs.</p></div>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <div class="practice-header"><span class="experience-icon"><svg class="icon"><use href="#i-tools"/></svg></span><span class="microtag">Personal &amp; peer support</span></div>
+          <h3>PC hardware &amp; troubleshooting</h3>
+          <p>Assembled and maintained desktop computers, assisted with PC wiring and setup, cleaned components, and replaced keyboard switches.</p>
+          <p class="practice-example"><strong>Examples:</strong> Narrowed a no-boot problem to a likely motherboard RAM-slot issue, and resolved overheating-related shutdowns through cooler maintenance, thermal paste replacement and stress retesting.</p>
+        </article>
+        <article class="experience-card">
+          <div class="practice-header"><span class="experience-icon"><svg class="icon"><use href="#i-monitor"/></svg></span><span class="microtag">Personal &amp; peer support</span></div>
+          <h3>Windows installation &amp; setup</h3>
+          <p>Created bootable USB installers, configured the boot process, installed Windows and drivers, formatted drives, and completed activation.</p>
+          <p class="practice-example"><strong>Practical application:</strong> Prepared desktop and laptop systems for use, from Windows installation media and drive setup through driver configuration.</p>
+        </article>
+        <article class="experience-card">
+          <div class="practice-header"><span class="experience-icon"><svg class="icon"><use href="#i-network"/></svg></span><span class="microtag">Academic laboratory</span></div>
+          <h3>Networking &amp; structured cabling</h3>
+          <p>Practiced network configuration using Cisco Packet Tracer, terminated straight-through and crossover Ethernet cables, and worked with keystones and patch panels.</p>
+          <p class="practice-example"><strong>Tools &amp; methods:</strong> T568A and T568B wiring, crimping tools, and Ethernet cable testing.</p>
+        </article>
+        <article class="experience-card">
+          <div class="practice-header"><span class="experience-icon"><svg class="icon"><use href="#i-server"/></svg></span><span class="microtag">Academic laboratory</span></div>
+          <h3>Windows Server &amp; virtualization</h3>
+          <p>Configured Windows Server and client virtual machines in Oracle VirtualBox, practicing domain setup, user accounts, DHCP, DNS, connectivity and shared permissions.</p>
+          <p class="practice-example"><strong>Lab exercise:</strong> Applied Group Policy to change client wallpapers and restrict access to Settings.</p>
+        </article>
+      </div>
+      <p class="small-disclaimer">Personal computer support and coursework are described separately. Windows Server and network cabling work were academic laboratory exercises, not production infrastructure administration.</p>
+    </section>
+
+    <section class="section wrap" id="more" aria-labelledby="more-title">
+      <div class="section-heading"><div><span class="section-number">06 /</span><h2 id="more-title">Work with real requirements</h2></div><p>Client-directed frontend work and hands-on inventory responsibilities.</p></div>
+      <div class="extra-grid"><article class="extra-card"><span class="microtag">Client-directed · Frontend & UI</span><h3>Coffee shop website</h3><p>Designed and built product browsing and pickup-order checkout interfaces in HTML, CSS and JavaScript, implementing requested revisions. Backend development was outside my role.</p><span class="text-muted">Project year / images to be confirmed</span></article><article class="extra-card"><span class="microtag">Client-directed · Frontend & UI</span><h3>Clinic landing page</h3><p>Designed and developed a clinic landing-page frontend using HTML, CSS and JavaScript, based on requirements and client feedback. Backend development was outside my role.</p><span class="text-muted">Project year / images to be confirmed</span></article><article class="extra-card"><span class="microtag">Family business · Inventory assistance</span><h3>Inventory operations</h3><p>Supported stock counting, replenishment orders, restocking and packing customer orders.</p><span class="text-muted">Practical non-IT experience</span></article></div>
+    </section>
+
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><div><span class="section-number">07 /</span><h2 id="about-title">Education & certificates</h2></div><p>Academic foundation and independently completed learning.</p></div>
+      <div class="education-layout">
+        <article class="education-card" aria-label="Education">
+          <div class="education-main">
+            <span class="microtag">Education · 2023 — Present</span>
+            <h3>National College of Science and Technology</h3>
+            <p class="education-location">Cavite, Philippines</p>
+          </div>
+          <div class="education-detail">
+            <span class="education-detail-eyebrow">Current degree program</span>
+            <p class="education-degree">Bachelor of Science in Information Technology</p>
+            <span class="education-period">Fourth year <span aria-hidden="true">·</span> September 2023 — Present</span>
+          </div>
+        </article>
+        <div class="cert-area">
+          <div class="cert-intro">
+            <div><span class="microtag">Continuing education</span><h3>Course certificates</h3></div>
+            <p>Five SoloLearn courses completed. Select a certificate to see the original full-size image.</p>
+          </div>
+          <div class="certificate-grid">
+          <button type="button" class="certificate-card" data-cert="cert_cpp.webp" data-cert-title="Introduction to C++" aria-label="View Introduction to C++ certificate">
+            <span class="certificate-image"><img src="assets/cert_cpp.webp" alt="SoloLearn Introduction to C++ completion certificate awarded to John Paul Yambao" loading="lazy" width="1275" height="900" /></span>
+            <strong>Introduction to C++</strong><span>Nov 19, 2023</span>
+          </button>
+          <button type="button" class="certificate-card" data-cert="cert_html.webp" data-cert-title="Introduction to HTML" aria-label="View Introduction to HTML certificate">
+            <span class="certificate-image"><img src="assets/cert_html.webp" alt="SoloLearn Introduction to HTML completion certificate awarded to John Paul Yambao" loading="lazy" width="1275" height="900" /></span>
+            <strong>Introduction to HTML</strong><span>Apr 14, 2024</span>
+          </button>
+          <button type="button" class="certificate-card" data-cert="cert_css.webp" data-cert-title="Introduction to CSS" aria-label="View Introduction to CSS certificate">
+            <span class="certificate-image"><img src="assets/cert_css.webp" alt="SoloLearn Introduction to CSS completion certificate awarded to John Paul Yambao" loading="lazy" width="1275" height="900" /></span>
+            <strong>Introduction to CSS</strong><span>May 14, 2024</span>
+          </button>
+          <button type="button" class="certificate-card" data-cert="cert_js.webp" data-cert-title="Introduction to JavaScript" aria-label="View Introduction to JavaScript certificate">
+            <span class="certificate-image"><img src="assets/cert_js.webp" alt="SoloLearn Introduction to JavaScript completion certificate awarded to John Paul Yambao" loading="lazy" width="1275" height="900" /></span>
+            <strong>Introduction to JavaScript</strong><span>Jun 17, 2024</span>
+          </button>
+          <button type="button" class="certificate-card" data-cert="cert_web.webp" data-cert-title="Web Development" aria-label="View Web Development certificate">
+            <span class="certificate-image"><img src="assets/cert_web.webp" alt="SoloLearn Web Development completion certificate awarded to John Paul Yambao" loading="lazy" width="1275" height="900" /></span>
+            <strong>Web Development</strong><span>Jun 18, 2024</span>
+          </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner"><div><p class="eyebrow light">Currently exploring IT internships</p><h2 id="contact-title">Let’s work<br/><em>together.</em></h2></div><div class="contact-copy"><p>I'm looking for an OJT opportunity where I can apply my skills in IT support, networking and software testing, contribute to a team, and keep learning.</p><a class="contact-email" href="mailto:jipibao@gmail.com">jipibao@gmail.com <svg class="icon"><use href="#i-diagonal"/></svg></a><div class="contact-actions"><a class="pill pill-light" href="assets/John_Paul_Yambao_Resume.pdf" download="John_Paul_Yambao_Resume.pdf"><svg class="icon"><use href="#i-download"/></svg> Resume</a><span class="link-pending">LinkedIn link coming soon</span></div></div></div></section>
+    <section class="recruiter-view" id="recruiter" aria-labelledby="recruiter-title" hidden>
+      <div class="wrap recruiter-inner">
+        <div class="recruiter-eyebrow"><span>JOHN PAUL YAMBAO / 2026</span><span>RECRUITER OVERVIEW — OJT</span></div>
+        <div class="recruiter-hero"><div><span class="recruiter-overline">FOURTH-YEAR BSIT STUDENT · CAVITE, PHILIPPINES</span><h1 id="recruiter-title">IT SUPPORT<span> / </span>QA<span> / </span><br/>NETWORKING.</h1><p>Technical foundations in PC troubleshooting and Windows Server labs, combined with directly documented manual software testing and independent frontend work.</p><div class="recruiter-hero-actions"><a href="assets/John_Paul_Yambao_Resume.pdf" download="John_Paul_Yambao_Resume.pdf" class="recruiter-primary">DOWNLOAD RESUME <svg class="icon"><use href="#i-download"/></svg></a><a href="mailto:jipibao@gmail.com" class="recruiter-link">EMAIL ME <svg class="icon"><use href="#i-diagonal"/></svg></a></div></div><div class="recruiter-facts"><span>AT A GLANCE</span><dl><div><dt>Education</dt><dd>BS Information Technology · NCST</dd></div><div><dt>Experience</dt><dd>Academic QA + hands-on technical practice</dd></div><div><dt>Target roles</dt><dd>IT Support · Networking · Manual QA</dd></div><div><dt>Availability</dt><dd>Seeking OJT placement</dd></div></dl></div></div>
+        <section class="recruiter-section" aria-labelledby="recruiter-work-title"><div class="recruiter-section-heading"><span>01 / PROJECTS</span><h2 id="recruiter-work-title">Selected work<span>.</span></h2><p>Quick proof of responsibilities, with links to inspect further.</p></div>
+          <div class="recruiter-project-list">
+            <article class="recruiter-project"><div class="recruiter-thumb"><img src="assets/solespace.webp" alt="SoleSpace storefront" loading="lazy" width="1350" height="679" /></div><div class="recruiter-project-info"><div class="recruiter-project-meta"><span>ACADEMIC THESIS · 2026</span><span>01 / 04</span></div><h3>SoleSpace</h3><p>Project Manager &amp; Primary Manual QA Tester — role-based functional testing, bug reports and verification; Oct 2026 recorded results: 80/80 core checks and 32/32 regression checks passed within the tested scope.</p><div class="recruiter-project-actions"><button type="button" data-open-project="solespace">QA CASE STUDY ↗</button><a href="https://solespace.shop/" target="_blank" rel="noopener noreferrer">LIVE WEBSITE ↗</a></div></div></article>
+            <article class="recruiter-project"><div class="recruiter-thumb"><img src="assets/nexa_dash.webp" alt="NexaCare Figma dashboard screen" loading="lazy" width="827" height="548" /></div><div class="recruiter-project-info"><div class="recruiter-project-meta"><span>PERSONAL FIGMA PROJECT · 2025</span><span>02 / 04</span></div><h3>NexaCare</h3><p>Healthcare management UI concept — landing, sign-in, dashboard and forms, connected in an interactive Figma prototype; not a deployed system.</p><div class="recruiter-project-actions"><button type="button" data-open-project="nexacare">DETAILS ↗</button><a href="https://www.figma.com/proto/n8Rjk2YOJF8D7Zs9KYJAJh/nexacare?node-id=0-1&amp;t=K2b93P10esiyYcw9-1" target="_blank" rel="noopener noreferrer">FIGMA PROTOTYPE ↗</a></div></div></article>
+            <article class="recruiter-project"><div class="recruiter-thumb recruiter-drip-thumb"><img src="assets/drip_home.webp" alt="Drip clothing app shopping page" loading="lazy" width="314" height="665" /></div><div class="recruiter-project-info"><div class="recruiter-project-meta"><span>PERSONAL FIGMA PROJECT · 2025</span><span>03 / 04</span></div><h3>Drip</h3><p>Mobile clothing shopping UI — navigable authentication, browsing and checkout screens designed in Figma, without a commerce backend.</p><div class="recruiter-project-actions"><button type="button" data-open-project="drip">DETAILS ↗</button><a href="https://www.figma.com/proto/4zudnxIhIa7psIR9sLLmSx/Drip?node-id=0-1&amp;t=XO9mSlQY30EYodMF-1" target="_blank" rel="noopener noreferrer">FIGMA PROTOTYPE ↗</a></div></div></article>
+            <article class="recruiter-project"><div class="recruiter-thumb"><img src="assets/yambiance.webp" alt="Yambiance WordPress homepage" loading="lazy" width="1350" height="680" /></div><div class="recruiter-project-info"><div class="recruiter-project-meta"><span>INDEPENDENT WEB PROJECTS · 2026</span><span>04 / 04</span></div><h3>WordPress collection</h3><p>Yambiance, Yamshore and Hapag: three solo promotional website demonstrations built with WordPress and Elementor Pro.</p><div class="recruiter-project-actions"><a href="https://yambaotechnoprefi.free.nf/?i=1" target="_blank" rel="noopener noreferrer">YAMBIANCE ↗</a><a href="https://yambaotechnolabexam.free.nf/?i=1" target="_blank" rel="noopener noreferrer">YAMSHORE ↗</a><a href="https://orange-wildflower-83de.lolers331.workers.dev/sample-page/homepage/" target="_blank" rel="noopener noreferrer">HAPAG ↗</a></div></div></article>
+          </div>
+        </section>
+        <section class="recruiter-section" aria-labelledby="recruiter-skills-title"><div class="recruiter-section-heading"><span>02 / SKILLS &amp; EXPERIENCE</span><h2 id="recruiter-skills-title">Technical range<span>.</span></h2><p>Personal practice and academic laboratories, clearly distinguished.</p></div><div class="recruiter-skills-grid"><article><span>IT SUPPORT</span><h3>Hardware / Windows</h3><p>PC assembly, RAM-slot diagnosis, cooling maintenance, bootable USB installation, driver setup.</p></article><article><span>NETWORKING LAB</span><h3>Networks / Cabling</h3><p>Packet Tracer, RJ45 termination, straight-through and crossover cables, keystones and patch panels.</p></article><article><span>SYSTEMS LAB</span><h3>Windows Server</h3><p>VirtualBox, Active Directory, domain users, DHCP/DNS, shared permissions and Group Policy.</p></article><article><span>CLIENT FRONTEND</span><h3>HTML / CSS / JS</h3><p>Designed and coded coffee-shop and clinic interfaces from provided requirements; no backend implementation.</p></article></div></section>
+        <section class="recruiter-contact"><div><span>03 / NEXT STEP</span><h2>LET’S TALK.</h2><p>Seeking an IT OJT opportunity. Based in General Mariano Alvarez, Cavite.</p></div><div><a href="mailto:jipibao@gmail.com">jipibao@gmail.com <svg class="icon"><use href="#i-diagonal"/></svg></a><p>NCST · BS Information Technology · 2023–present</p><button class="recruiter-back" id="recruiter-back" type="button">← RETURN TO FULL PORTFOLIO</button></div></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner"><a href="#top" class="footer-brand">/ John Paul Yambao</a><p>General Mariano Alvarez, Cavite · © 2026</p><a class="back-top" href="#top">Back to top ↑</a></div></footer>
+
+  <!-- Floating theme switch is available in both the full portfolio and Recruiter View. -->
+  <button class="utility-button theme-toggle floating-theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="icon theme-moon"><use href="#i-moon"/></svg><svg class="icon theme-sun"><use href="#i-sun"/></svg><span id="theme-toggle-label">Dark mode</span></button>
+
+  <dialog id="project-dialog" class="content-dialog" aria-labelledby="dialog-heading"><div class="dialog-shell"><div class="dialog-top"><span id="dialog-eyebrow" class="microtag"></span><button class="dialog-close icon-button" id="project-close" type="button" aria-label="Close project details"><svg class="icon"><use href="#i-x"/></svg></button></div><h2 id="dialog-heading"></h2><p id="dialog-intro" class="dialog-intro"></p><div id="dialog-points" class="dialog-points"></div><div id="dialog-actions" class="dialog-actions"></div></div></dialog>
+  <dialog id="certificate-dialog" class="certificate-dialog" aria-labelledby="certificate-dialog-title"><div class="certificate-lightbox"><div class="dialog-top"><h2 id="certificate-dialog-title"></h2><button class="dialog-close icon-button" id="certificate-close" type="button" aria-label="Close certificate"><svg class="icon"><use href="#i-x"/></svg></button></div><img id="certificate-full" src="" alt="" /></div></dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-label="Enlarged project screenshot"><div class="image-dialog-shell"><div class="image-dialog-top"><p id="image-dialog-caption">Project screenshot</p><button type="button" id="image-dialog-close" class="icon-button" aria-label="Close screenshot"><svg class="icon"><use href="#i-x"/></svg></button></div><img id="image-dialog-full" src="" alt="" /></div></dialog>
+</body>
+</html>
