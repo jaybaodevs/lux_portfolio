@@ -188,6 +188,9 @@ svg.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;
 .contact-email{font:normal clamp(24px,3.2vw,40px) var(--serif);display:inline-flex;align-items:center;gap:18px;border-bottom:1px solid #9f816d;padding-bottom:8px}
 .contact-email .icon{width:23px;height:23px}
 .contact-actions{display:flex;align-items:center;gap:25px;margin-top:35px}
+.contact-socials{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:24px}
+.contact-socials a{color:#e3d4c9;font-size:13px;border-bottom:1px solid rgba(227,212,201,.42);padding-bottom:3px;transition:color .2s,border-color .2s}
+.contact-socials a:hover{color:#fffaf4;border-color:#fffaf4}
 .site-footer{background:#34251e;color:#d7c4b5}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:26px 0 30px;font-size:11px}
 .footer-brand{font:normal 19px var(--serif);color:white}
@@ -860,7 +863,7 @@ body.recruiter-mode {
 html[data-theme="dark"] .floating-nav .nav-link.active{color:var(--page)}
 .theme-picker{position:relative;flex:none;padding-left:12px;border-left:1px solid var(--border-strong)}
 .theme-mode-icon{display:none}
-.theme-picker summary{display:flex;align-items:center;justify-content:space-between;gap:12px;width:88px;min-height:42px;padding:0 12px;border:1px solid var(--border);border-radius:999px;background:var(--page);color:var(--ink);font:700 10px var(--sans);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;list-style:none}
+.theme-picker summary{display:flex;align-items:center;justify-content:space-between;gap:12px;width:108px;min-height:42px;padding:0 12px;border:1px solid var(--border);border-radius:999px;background:var(--page);color:var(--ink);font:700 10px var(--sans);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;list-style:none}
 .theme-picker summary::-webkit-details-marker{display:none}
 .theme-picker summary .icon{width:14px;height:14px;transition:transform .18s ease}
 .theme-picker[open] summary .icon{transform:rotate(180deg)}
@@ -872,7 +875,7 @@ html[data-theme="dark"] .theme-options button[aria-pressed="true"]{color:var(--p
 .site-footer{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 body.recruiter-mode .floating-nav{display:none!important}
 body.recruiter-mode .header-actions .theme-picker{padding-left:0;border-left:0}
-body.recruiter-mode .header-actions .theme-picker summary{display:flex;align-items:center;justify-content:space-between;gap:7px;width:114px;min-height:44px;padding:0 12px;border:1px solid var(--r-line);border-radius:3px;background:var(--r-panel);color:var(--r-text);font:700 11px var(--sans);letter-spacing:normal;text-align:left;text-transform:none;white-space:nowrap;transition:background .2s,border-color .2s}
+body.recruiter-mode .header-actions .theme-picker summary{display:flex;align-items:center;justify-content:space-between;gap:7px;width:134px;min-height:44px;padding:0 12px;border:1px solid var(--r-line);border-radius:3px;background:var(--r-panel);color:var(--r-text);font:700 11px var(--sans);letter-spacing:normal;text-align:left;text-transform:none;white-space:nowrap;transition:background .2s,border-color .2s}
 body.recruiter-mode .header-actions .theme-picker summary:hover{background:var(--r-thumb);border-color:var(--r-muted)}
 html[data-theme="dark"] body.recruiter-mode .header-actions .theme-picker summary{background:transparent;border-color:var(--r-text);color:var(--r-text)}
 html[data-theme="dark"] body.recruiter-mode .header-actions .theme-picker summary:hover{background:var(--r-panel);border-color:var(--r-text)}
@@ -992,4 +995,10 @@ body.recruiter-mode .recruiter-view{padding-bottom:calc(48px + env(safe-area-ins
 }
 @media (min-width:701px) {
   .site-header .menu-toggle{display:none!important}
+}
+.theme-picker summary{box-sizing:border-box;gap:6px;padding-right:16px}
+.theme-picker summary .icon:not(.theme-mode-icon){width:12px;height:12px;flex:none}
+body.recruiter-mode .header-actions .theme-picker summary{padding-right:16px}
+@media(max-width:700px){
+  .floating-nav .theme-picker summary{padding-right:16px}
 }
