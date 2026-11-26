@@ -50,7 +50,7 @@ The technical practice section groups real activities into four balanced categor
 ## Pending before public launch
 
 1. **Resume:** `assets/John_Paul_Yambao_Resume.pdf` is a bundled earlier resume copy. Review and replace it with the final updated resume before launch.
-2. **LinkedIn:** Link not yet provided; website displays an honest non-clickable placeholder.
+2. **LinkedIn:** No profile URL was supplied, so the public site does not show a LinkedIn link.
 3. **Figma:** The user-provided public prototype links for NexaCare and Drip are included and should be verified externally before deployment.
 4. **Client projects:** Exact year associated with the coffee shop vs clinic project and public display permission for screenshots are not confirmed, so the site does not invent dates or images.
 5. **QA screenshots:** Original Discord reports may contain user names/addresses. Do not embed them publicly without redaction; site currently explains the actual cases without private evidence.

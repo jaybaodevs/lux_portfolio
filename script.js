@@ -82,25 +82,6 @@ function assetUrl(file) { return (typeof embeddedAssets !== 'undefined' && embed
 const q = (selector, root=document) => root.querySelector(selector);
 const qa = (selector, root=document) => Array.from(root.querySelectorAll(selector));
 
-const mobileToggle = q('#menu-toggle');
-const navigation = q('#primary-nav');
-function closeNavigation() {
-  mobileToggle.setAttribute('aria-expanded','false');
-  mobileToggle.setAttribute('aria-label','Open navigation menu');
-  navigation.classList.remove('open');
-}
-mobileToggle.addEventListener('click', () => {
-  const shouldOpen = mobileToggle.getAttribute('aria-expanded') !== 'true';
-  navigation.classList.toggle('open',shouldOpen);
-  mobileToggle.setAttribute('aria-expanded',String(shouldOpen));
-  mobileToggle.setAttribute('aria-label',shouldOpen ? 'Close navigation menu' : 'Open navigation menu');
-});
-qa('.primary-nav a').forEach(link => link.addEventListener('click', closeNavigation));
-document.addEventListener('keydown', event => { if(event.key === 'Escape') closeNavigation(); });
-document.addEventListener('click', event => {
-  if (!event.target.closest('.site-header') && navigation.classList.contains('open')) closeNavigation();
-});
-
 const sectionToNav = {
   home:'home', skills:'skills',work:'work',design:'work',websites:'work',
   experience:'experience',more:'experience',about:'about',contact:'contact'
@@ -166,32 +147,66 @@ q('#certificate-close').addEventListener('click',()=>certificateDialog.close());
 certificateDialog.addEventListener('click',event=>{if(event.target===certificateDialog)certificateDialog.close();});
 
 
-// Presentation preferences: light by default, with a shared floating switch for both views.
-const themeButton=q('#theme-toggle');
-const themeText=q('#theme-toggle-label');
+// Presentation preferences: Auto follows the system; explicit choices persist.
+const themePicker=q('#theme-picker');
+const themeLabel=q('#theme-label');
+const themeChoices=qa('[data-theme-choice]',themePicker);
+const systemTheme=window.matchMedia('(prefers-color-scheme: dark)');
+let selectedTheme='auto';
 function setTheme(theme, persist=true) {
-  const dark=theme==='dark';
+  selectedTheme=['auto','light','dark'].includes(theme)?theme:'auto';
+  const dark=selectedTheme==='dark'||(selectedTheme==='auto'&&systemTheme.matches);
   document.documentElement.dataset.theme=dark?'dark':'light';
-  themeButton.setAttribute('aria-pressed', String(dark));
-  themeButton.setAttribute('aria-label', dark?'Switch to light mode':'Switch to dark mode');
-  themeText.textContent=dark?'Light mode':'Dark mode';
-  themeButton.title=dark?'Switch to light mode':'Switch to dark mode';
+  themeLabel.textContent=selectedTheme;
+  q('#theme-picker summary').setAttribute('aria-label',`Color theme: ${selectedTheme}`);
+  themeChoices.forEach(choice=>choice.setAttribute('aria-pressed',String(choice.dataset.themeChoice===selectedTheme)));
   q('meta[name="theme-color"]').setAttribute('content', dark?'#111114':'#fbf7f1');
-  if (persist) {try {localStorage.setItem('jp-theme-v9',dark?'dark':'light');}catch(e){/* local file preview */}}
+  if (persist) {try {localStorage.setItem('jp-theme-v9',selectedTheme);}catch(e){/* local file preview */}}
 }
-setTheme(document.documentElement.dataset.theme==='dark'?'dark':'light',false);
-themeButton.addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
+let savedTheme='auto';
+try { savedTheme=localStorage.getItem('jp-theme-v9')||'auto'; } catch(e) { /* local file preview */ }
+setTheme(savedTheme,false);
+themeChoices.forEach(choice=>choice.addEventListener('click',()=>{setTheme(choice.dataset.themeChoice);themePicker.open=false;}));
+document.addEventListener('click',event=>{if(!themePicker.contains(event.target))themePicker.open=false;});
+themePicker.addEventListener('keydown',event=>{if(event.key==='Escape'&&themePicker.open){themePicker.open=false;q('summary',themePicker).focus();}});
+systemTheme.addEventListener('change',()=>{if(selectedTheme==='auto')setTheme('auto',false);});
 
 const recruiterButton=q('#recruiter-toggle');
 const recruiterButtonLabel=q('#recruiter-toggle-label');
 const recruiterSection=q('#recruiter');
+const floatingNav=q('.floating-nav');
+const headerActions=q('.header-actions');
+const mobileMenuButton=q('#menu-toggle');
+const mobileViewport=window.matchMedia('(max-width: 700px)');
+function setMobileMenuOpen(open, restoreFocus=false) {
+  open=Boolean(open&&mobileViewport.matches&&!document.body.classList.contains('recruiter-mode'));
+  document.body.classList.toggle('mobile-menu-open',open);
+  mobileMenuButton.setAttribute('aria-expanded',String(open));
+  mobileMenuButton.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+  if(restoreFocus)mobileMenuButton.focus();
+}
+function placeThemePicker() {
+  const recruiterMode=document.body.classList.contains('recruiter-mode');
+  (recruiterMode?(mobileViewport.matches?document.body:headerActions):floatingNav).append(themePicker);
+}
+mobileMenuButton.addEventListener('click',()=>setMobileMenuOpen(!document.body.classList.contains('mobile-menu-open')));
+qa('#primary-nav .nav-link').forEach(link=>link.addEventListener('click',()=>setMobileMenuOpen(false)));
+document.addEventListener('click',event=>{
+  if(document.body.classList.contains('mobile-menu-open')&&!floatingNav.contains(event.target)&&!mobileMenuButton.contains(event.target))setMobileMenuOpen(false);
+});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.classList.contains('mobile-menu-open'))setMobileMenuOpen(false,true);});
+mobileViewport.addEventListener('change',event=>{
+  if(!event.matches)setMobileMenuOpen(false);
+  if(document.body.classList.contains('recruiter-mode'))placeThemePicker();
+});
 function setRecruiterView(on, {updateUrl=true}={}) {
+  setMobileMenuOpen(false);
   document.body.classList.toggle('recruiter-mode',on);
+  placeThemePicker();
   recruiterSection.hidden=!on;
   recruiterButton.setAttribute('aria-pressed', String(on));
   recruiterButton.setAttribute('aria-label',on?'Return to full portfolio':'Switch to recruiter summary');
-  recruiterButtonLabel.textContent=on?'Full portfolio':'Recruiter view';
-  closeNavigation();
+  recruiterButtonLabel.textContent=on?'Full portfolio':"Recruiter's view";
   if (updateUrl && ['http:','https:'].includes(location.protocol)) {
     const url=new URL(location.href);
     on?url.searchParams.set('view','recruiter'):url.searchParams.delete('view');

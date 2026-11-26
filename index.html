@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
-  <script>try { if (localStorage.getItem('jp-theme-v9') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch(e) { /* local previews may restrict storage */ }</script>
+  <script>try { const theme=localStorage.getItem('jp-theme-v9'); document.documentElement.dataset.theme=theme==='dark'||(theme!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'; } catch(e) { if(matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme='dark'; }</script>
   <script defer src="script.js"></script>
   <title>John Paul Yambao — IT Portfolio</title>
 </head>
@@ -39,27 +39,40 @@
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2m17.1 7.1-1.4-1.4M6.3 6.3 4.9 4.9m14.2 0-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
     <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
     <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
   </svg>
 
   <header class="site-header" id="top">
     <div class="header-inner wrap">
       <a class="brand" href="#home" aria-label="John Paul Yambao, go to home"><span class="brand-slash">/</span> John Paul Yambao<span class="brand-dot">.</span></a>
-      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="#work">Work</a>
-        <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
       <div class="header-actions">
-        <button class="utility-button recruiter-toggle" id="recruiter-toggle" type="button" aria-pressed="false" aria-label="Switch to recruiter summary" title="Compact overview for recruiters"><svg class="icon"><use href="#i-eye"/></svg><span id="recruiter-toggle-label">Recruiter view</span></button>
-
-        <a class="pill pill-dark header-resume" href="assets/John_Paul_Yambao_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-eye"/></svg> Resume</a>
+        <button class="utility-button recruiter-toggle" id="recruiter-toggle" type="button" aria-pressed="false" aria-label="Switch to recruiter summary" title="Compact overview for recruiters"><svg class="icon"><use href="#i-eye"/></svg><span id="recruiter-toggle-label">Recruiter's view</span></button>
+        <a class="pill pill-dark header-resume" href="assets/John_Paul_Yambao_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Preview resume"><svg class="icon"><use href="#i-eye"/></svg> Resume</a>
       </div>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+      <button class="utility-button menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="menu-line menu-line-top" d="M4 7h16"/><path class="menu-line menu-line-middle" d="M4 12h16"/><path class="menu-line menu-line-bottom" d="M4 17h16"/></svg>
+      </button>
     </div>
   </header>
+
+  <div class="floating-nav">
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#work">Work</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#experience">Experience</a>
+      <a class="nav-link" href="#about">Education</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <details class="theme-picker" id="theme-picker">
+      <summary aria-label="Color theme"><svg class="icon theme-mode-icon theme-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="icon theme-mode-icon theme-moon" aria-hidden="true"><use href="#i-moon"/></svg><span id="theme-label">Auto</span><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+      <div class="theme-options" role="group" aria-label="Choose color theme">
+        <button type="button" data-theme-choice="auto">System</button>
+        <button type="button" data-theme-choice="light">Light</button>
+        <button type="button" data-theme-choice="dark">Dark</button>
+      </div>
+    </details>
+  </div>
 
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
@@ -81,7 +94,7 @@
         <div class="hero-copy">
           <h1 id="hero-title">John Paul<br />Yambao<span class="dot">.</span></h1>
           <p class="hero-role">IT Support <span>·</span> Networking Fundamentals <span>·</span> Software QA</p>
-          <p class="hero-description">Fourth-year IT student at the National College of Science and Technology. I enjoy diagnosing technical problems, testing real-world workflows, and creating practical digital experiences.</p>
+          <p class="hero-description">I’m a fourth-year IT student who enjoys troubleshooting computers and figuring out how software works in everyday use. I build website and app prototypes, and I’m currently practicing full-stack web development to understand how the interface, server, and data work together. I’m also interested in IT support, networking, and software QA, and like learning by working through real problems.</p>
           <div class="hero-actions">
             <a class="pill pill-dark" href="#work">Explore my work <svg class="icon"><use href="#i-diagonal"/></svg></a>
             <a class="pill pill-outline" href="assets/John_Paul_Yambao_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-eye"/></svg> Preview resume</a>
@@ -96,6 +109,7 @@
 
     <section class="section wrap" id="work" aria-labelledby="work-title">
       <div class="section-heading"><div><h2 id="work-title">Selected work</h2></div><p>Projects are presented by what I contributed, not just what the product does.</p></div>
+      <nav class="work-jumps" aria-label="More portfolio sections"><span>Explore more:</span><a href="#design">Interface design</a><a href="#websites">Independent websites</a><a href="#more">Client work</a></nav>
 
       <article class="featured-project editorial-feature" aria-labelledby="solespace-title">
         <div class="featured-media media-surface composite-feature" aria-label="SoleSpace project page previews">
@@ -270,7 +284,7 @@
 
     <section class="section wrap" id="more" aria-labelledby="more-title">
       <div class="section-heading"><div><h2 id="more-title">Work with real requirements</h2></div><p>Client-directed frontend work and hands-on inventory responsibilities.</p></div>
-      <div class="extra-grid"><article class="extra-card"><span class="microtag">Client-directed · Frontend & UI</span><h3>Coffee shop website</h3><p>Designed and built product browsing and pickup-order checkout interfaces in HTML, CSS and JavaScript, implementing requested revisions. Backend development was outside my role.</p><span class="text-muted">Project year / images to be confirmed</span></article><article class="extra-card"><span class="microtag">Client-directed · Frontend & UI</span><h3>Clinic landing page</h3><p>Designed and developed a clinic landing-page frontend using HTML, CSS and JavaScript, based on requirements and client feedback. Backend development was outside my role.</p><span class="text-muted">Project year / images to be confirmed</span></article><article class="extra-card"><span class="microtag">Family business · Inventory assistance</span><h3>Inventory operations</h3><p>Supported stock counting, replenishment orders, restocking and packing customer orders.</p><span class="text-muted">Practical non-IT experience</span></article></div>
+      <div class="extra-grid"><article class="extra-card"><span class="microtag">Client-directed · Frontend & UI</span><h3>Coffee shop website</h3><p>Designed and built product browsing and pickup-order checkout interfaces in HTML, CSS and JavaScript, implementing requested revisions. Backend development was outside my role.</p></article><article class="extra-card"><span class="microtag">Client-directed · Frontend & UI</span><h3>Clinic landing page</h3><p>Designed and developed a clinic landing-page frontend using HTML, CSS and JavaScript, based on requirements and client feedback. Backend development was outside my role.</p></article><article class="extra-card"><span class="microtag">Family business · Inventory assistance</span><h3>Inventory operations</h3><p>Supported stock counting, replenishment orders, restocking and packing customer orders.</p><span class="text-muted">Practical non-IT experience</span></article></div>
     </section>
 
     <section class="section wrap" id="about" aria-labelledby="about-title">
@@ -319,7 +333,7 @@
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner"><div><p class="eyebrow light">Currently exploring IT internships</p><h2 id="contact-title">Let’s work<br/><em>together.</em></h2></div><div class="contact-copy"><p>I'm looking for an OJT opportunity where I can apply my skills in IT support, networking and software testing, contribute to a team, and keep learning.</p><a class="contact-email" href="mailto:jipibao@gmail.com">jipibao@gmail.com <svg class="icon"><use href="#i-diagonal"/></svg></a><div class="contact-actions"><a class="pill pill-light" href="assets/John_Paul_Yambao_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-eye"/></svg> Resume</a><span class="link-pending">LinkedIn link coming soon</span></div></div></div></section>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner"><div><p class="eyebrow light">Currently exploring IT internships</p><h2 id="contact-title">Let’s work<br/><em>together.</em></h2></div><div class="contact-copy"><p>I'm looking for an OJT opportunity where I can apply my skills in IT support, networking and software testing, contribute to a team, and keep learning.</p><a class="contact-email" href="mailto:jipibao@gmail.com">jipibao@gmail.com <svg class="icon"><use href="#i-diagonal"/></svg></a><div class="contact-actions"><a class="pill pill-light" href="assets/John_Paul_Yambao_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-eye"/></svg> Resume</a><a class="pill pill-light" href="mailto:jipibao@gmail.com">Email me <svg class="icon"><use href="#i-diagonal"/></svg></a></div></div></div></section>
     <section class="recruiter-view" id="recruiter" aria-labelledby="recruiter-title" hidden>
       <div class="wrap recruiter-inner">
         <div class="recruiter-eyebrow"><span>JOHN PAUL YAMBAO / 2026</span><span>RECRUITER OVERVIEW — OJT</span></div>
@@ -338,10 +352,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-inner"><a href="#top" class="footer-brand">/ John Paul Yambao</a><p>General Mariano Alvarez, Cavite · © 2026</p><a class="back-top" href="#top">Back to top ↑</a></div></footer>
-
-  <!-- Floating theme switch is available in both the full portfolio and Recruiter View. -->
-  <button class="utility-button theme-toggle floating-theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="icon theme-moon"><use href="#i-moon"/></svg><svg class="icon theme-sun"><use href="#i-sun"/></svg><span id="theme-toggle-label">Dark mode</span></button>
+  <footer class="site-footer"><div class="wrap footer-inner"><a href="#top" class="footer-brand">/ John Paul Yambao</a><p>General Mariano Alvarez, Cavite · © 2026</p></div></footer>
 
   <dialog id="project-dialog" class="content-dialog" aria-labelledby="dialog-heading"><div class="dialog-shell"><div class="dialog-top"><span id="dialog-eyebrow" class="microtag"></span><button class="dialog-close icon-button" id="project-close" type="button" aria-label="Close project details"><svg class="icon"><use href="#i-x"/></svg></button></div><h2 id="dialog-heading"></h2><p id="dialog-intro" class="dialog-intro"></p><div id="dialog-points" class="dialog-points"></div><div id="dialog-actions" class="dialog-actions"></div></div></dialog>
   <dialog id="certificate-dialog" class="certificate-dialog" aria-labelledby="certificate-dialog-title"><div class="certificate-lightbox"><div class="dialog-top"><h2 id="certificate-dialog-title"></h2><button class="dialog-close icon-button" id="certificate-close" type="button" aria-label="Close certificate"><svg class="icon"><use href="#i-x"/></svg></button></div><img id="certificate-full" src="" alt="" /></div></dialog>
