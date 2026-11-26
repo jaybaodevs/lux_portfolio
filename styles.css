@@ -386,7 +386,7 @@ body.recruiter-mode .pill-dark{background:var(--r-button);color:var(--r-button-t
 .recruiter-inner{padding-top:45px}
 .recruiter-eyebrow{display:flex;justify-content:space-between;gap:20px;font:700 10px var(--sans);letter-spacing:1.5px;color:var(--r-muted);border-top:1px solid var(--r-line);padding-top:15px}
 .recruiter-hero{display:grid;grid-template-columns:1.65fr .75fr;gap:clamp(35px,5vw,90px);padding:65px 0 80px}
-.recruiter-overline,.recruiter-facts>span,.recruiter-section-heading>span,.recruiter-project-meta,.recruiter-skills-grid article>span,.recruiter-contact span{font:750 10px var(--sans);text-transform:uppercase;letter-spacing:1.65px;color:var(--r-muted)}
+.recruiter-overline,.recruiter-facts>span,.recruiter-section-heading>span,.recruiter-project-meta,.recruiter-contact span{font:750 10px var(--sans);text-transform:uppercase;letter-spacing:1.65px;color:var(--r-muted)}
 .recruiter-hero h1{font-size:clamp(52px,6.4vw,102px);font-weight:900;line-height:.94;letter-spacing:-.075em;margin:22px 0 25px}
 .recruiter-hero h1 span{color:var(--r-muted)}
 .recruiter-hero p{color:var(--r-soft);max-width:690px;font-size:14px;line-height:1.75}
@@ -419,10 +419,17 @@ body.recruiter-mode .pill-dark{background:var(--r-button);color:var(--r-button-t
 .recruiter-project-actions{margin-top:auto;display:flex;gap:8px 16px;flex-wrap:wrap}
 .recruiter-project-actions button,.recruiter-project-actions a{font-size:10px;font-weight:800;letter-spacing:.65px;border:1px solid var(--r-line);background:var(--r-chip);color:var(--r-text);padding:11px 14px;cursor:pointer}
 .recruiter-project-actions button:hover,.recruiter-project-actions a:hover{background:var(--r-thumb)}
-.recruiter-skills-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
-.recruiter-skills-grid article{border:1px solid var(--r-line);background:var(--r-panel);padding:23px 20px;min-height:190px}
-.recruiter-skills-grid h3{font:750 23px/1.1 var(--sans);letter-spacing:-.04em;margin:20px 0 11px}
-.recruiter-skills-grid p{color:var(--r-soft);font-size:12px;line-height:1.7;margin:0}
+.recruiter-toolkit{border-top:1px solid var(--r-line)}
+.recruiter-toolkit-row{display:grid;grid-template-columns:minmax(210px,.8fr) minmax(0,2fr);align-items:center;gap:28px;padding:22px 0;border-bottom:1px solid var(--r-line)}
+.recruiter-toolkit-copy h3{font:750 21px/1.15 var(--sans);letter-spacing:-.035em;margin:0 0 7px}
+.recruiter-toolkit-copy p{max-width:290px;color:var(--r-soft);font-size:12px;line-height:1.6;margin:0}
+.recruiter-toolkit-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(68px,1fr));gap:12px 8px;align-items:center;list-style:none;margin:0;padding:0}
+.recruiter-toolkit-list li{display:flex;min-width:0;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.recruiter-toolkit-list li>svg{width:36px;height:36px;color:var(--r-text);stroke:currentColor;stroke-width:1.8;overflow:visible}
+.recruiter-toolkit-list li>small{color:var(--r-soft);font-size:10px;line-height:1.3;overflow-wrap:anywhere}
+.recruiter-ai-toolkit>span{display:block;margin:0 0 8px;color:var(--r-muted);font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.recruiter-toolkit-workflows{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0 0 18px;padding:0}
+.recruiter-toolkit-workflows li{padding:7px 9px;border:1px solid var(--r-line);border-radius:4px;color:var(--r-text);font-size:10px;line-height:1.2}
 .recruiter-contact{display:grid;grid-template-columns:1fr 1fr;gap:25px;border-top:1px solid var(--r-line);padding:46px 0 20px}
 .recruiter-contact h2{font-size:clamp(48px,5vw,76px);font-weight:900;letter-spacing:-.065em;margin:14px 0 10px}
 .recruiter-contact p{font-size:12px;color:var(--r-soft)}
@@ -450,7 +457,6 @@ body.recruiter-mode .pill-dark{background:var(--r-button);color:var(--r-button-t
   .primary-nav.open{display:flex}.nav-link{padding:11px 0;font-size:13px}.nav-link::after{display:none}
   .menu-toggle{display:flex;order:3;margin-left:0}.header-actions{margin-left:auto}.header-resume{margin-left:0}
   .editorial-feature{grid-template-columns:1fr 1fr;gap:28px}.editorial-feature .display-title{font-size:clamp(52px,6vw,74px)}
-  .recruiter-skills-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:900px){
   .editorial-feature,.showcase-row{grid-template-columns:1fr;gap:28px}
@@ -471,13 +477,13 @@ body.recruiter-mode .pill-dark{background:var(--r-button);color:var(--r-button-t
   .recruiter-eyebrow{font-size:8px}.recruiter-inner{padding-top:22px}.recruiter-hero{padding:36px 0 55px;gap:30px}.recruiter-hero h1{font-size:clamp(46px,11vw,74px)}
   .recruiter-section{margin-bottom:62px}.recruiter-section-heading{grid-template-columns:1fr}.recruiter-section-heading>span{grid-column:auto}.recruiter-section-heading p{justify-self:start}
   .recruiter-project{grid-template-columns:1fr}.recruiter-thumb{padding:20px;max-height:280px}.recruiter-thumb img{max-height:245px}.recruiter-project-info{padding:24px 20px}
-  .recruiter-skills-grid{grid-template-columns:1fr 1fr}.recruiter-skills-grid article{padding:16px;min-height:0}.recruiter-skills-grid h3{font-size:21px}
+  .recruiter-toolkit-row{grid-template-columns:1fr;gap:16px;padding:20px 0}
   .recruiter-contact{grid-template-columns:1fr}.recruiter-contact>div:last-child{justify-self:start}
 }
 @media(max-width:420px){
   .brand{font-size:15px}.header-actions{gap:5px}.utility-button{width:34px;height:35px}.header-resume{min-width:35px}.menu-toggle{width:39px;height:39px}
   .showcase-visual{min-height:260px}.showcase-visual-label{font-size:8px;left:14px}.showcase-nexa-landing{top:27%}.showcase-drip-logo{top:29%}
-  .recruiter-skills-grid{grid-template-columns:1fr}.recruiter-project-meta{font-size:9px;letter-spacing:.6px}.recruiter-hero-actions{gap:17px}
+  .recruiter-project-meta{font-size:9px;letter-spacing:.6px}.recruiter-hero-actions{gap:17px}
 }
 @media(prefers-reduced-motion:reduce){.showcase-nexa-landing,.showcase-nexa-dashboard,.site-screenshot{transition:none}}
 /* Keep the whole project image unobscured; place the viewer button below it. */
@@ -685,7 +691,7 @@ html[data-theme="dark"] body.recruiter-mode .recruiter-view {
 .cert-area,
 .recruiter-facts,
 .recruiter-project,
-.recruiter-skills-grid article {
+.recruiter-toolkit-row {
   background-image: var(--grain-card-tile);
   background-size: 160px 160px;
   background-repeat: repeat;
@@ -710,7 +716,7 @@ html[data-theme="dark"] .capability {
 @media print {
   body,.hero,body.recruiter-mode .recruiter-view,
   .capability,.qa-case,.experience-card,.extra-card,.education-card,.cert-area,
-  .recruiter-facts,.recruiter-project,.recruiter-skills-grid article {
+  .recruiter-facts,.recruiter-project,.recruiter-toolkit-row {
     background-image: none !important;
   }
 }
